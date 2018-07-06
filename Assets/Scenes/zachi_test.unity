@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 60272551}
   - component: {fileID: 60272550}
   - component: {fileID: 60272549}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: szuflada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,28 +146,19 @@ Transform:
   m_Father: {fileID: 1623523268}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!145 &60272549
-SpringJoint:
+--- !u!114 &60272549
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 60272547}
-  m_ConnectedBody: {fileID: 1623523269}
-  m_Anchor: {x: 0, y: 0.5, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.9999999, y: 0.0910511, z: 0}
-  serializedVersion: 2
-  m_Spring: 1
-  m_Damper: 0.2
-  m_MinDistance: 0
-  m_MaxDistance: 1
-  m_Tolerance: 0.025
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 1
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 402e3378024bf154f965ca79060f0b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XMin: 1
+  XMax: 2
 --- !u!54 &60272550
 Rigidbody:
   m_ObjectHideFlags: 0
