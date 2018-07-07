@@ -12,6 +12,8 @@ public class SpawnersManager : MonoBehaviour
     {
         Spawners = new List<SceneItemSpawner>();
         Spawners.AddRange(FindObjectsOfType<SceneItemSpawner>());
+
+        SpawnRandomItems(100);
     }
 
     public void SpawnItems(List<InventoryItem> Items)
