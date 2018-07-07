@@ -231,10 +231,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 5
-  m_RunSpeed: 10
-  m_RunstepLenghten: 0.7
-  m_JumpSpeed: 10
+  m_WalkSpeed: 3
+  m_RunSpeed: 3
+  m_RunstepLenghten: 0.04
+  m_JumpSpeed: 3
   m_StickToGroundForce: 10
   m_GravityMultiplier: 2
   m_MouseLook:
@@ -532,6 +532,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba1cc6133b52d94f88e80ea5ac3ab28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentPlayer:
+    PlayerID: 
+    PlayerInventory:
+      Items: []
+    PreferenceType: {fileID: 0}
   interactibleLayers:
     serializedVersion: 2
     m_Bits: 4294966783

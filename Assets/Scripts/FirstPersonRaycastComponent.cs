@@ -61,7 +61,7 @@ public class FirstPersonRaycastComponent : MonoBehaviour
                     if (Input.GetAxisRaw(HOLD) != 0 || Input.GetButton(TAKE_OR_INTERACT_BUTTON))
                     {
                         FirstPersonController.HoldingThing = true;
-                        point = rh.transform.TransformPoint(rh.point);
+                        point = rh.transform.InverseTransformPoint(rh.point);
                     }
                     break;
                 default:

@@ -19,7 +19,7 @@ public class Drawer : MonoBehaviour
         this.gameObject.layer = LayerMask.NameToLayer("Interactable");
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         if (X)
         {
