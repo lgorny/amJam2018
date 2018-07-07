@@ -36,5 +36,6 @@ public class PlayersJoin : MonoBehaviour
         }
 
         FoodPreferenceDropdown.value = 0;
+        FoodPreferenceDropdown.RefreshShownValue();
     }
 }
