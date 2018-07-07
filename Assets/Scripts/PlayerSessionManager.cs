@@ -48,7 +48,7 @@ public class PlayerSessionManager : MonoBehaviour
         PlayerControllerInstance = Instantiate(PlayerController, Vector3.zero, Quaternion.identity);
         PlayerControllerInstance.GetComponentInChildren<FirstPersonRaycastComponent>().CurrentPlayer = CurrentPlayer;
 
-        //StartCoroutine(StartRoundCounter());
+        StartCoroutine(StartRoundCounter());
     }
 
     public void SetupPlayers()
@@ -103,6 +103,9 @@ public class PlayerSessionManager : MonoBehaviour
     public void SessionEnded()
     {
         Destroy(PlayerControllerInstance);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         Debug.Log("Session Ended");
         InitNextRound();
