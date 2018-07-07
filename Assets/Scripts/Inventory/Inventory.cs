@@ -23,6 +23,8 @@ public class Inventory
     {
         if (Items.Count > 0)
         {
+
+            Debug.Log("Spawn:" + Items[Items.Count - 1].name);
             Items[Items.Count -1].Spawn(Position);
             RemoveItem(Items[Items.Count - 1]);
         }

@@ -11,6 +11,7 @@ public class InventoryItem : ScriptableObject
     public int Points;
     public GameObject Prefab;
 
+    [HideInInspector]
     public SessionPlayer Owner;
 
     public void Spawn(Vector3 Position)
