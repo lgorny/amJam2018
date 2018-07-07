@@ -23,7 +23,7 @@ public class FirstPersonRaycastComponent : MonoBehaviour
             CurrentPlayer.PlayerInventory.SpawnSelected(transform.position + transform.forward);
         }
 
-        if (Input.GetAxisRaw(HOLD) == 0 && Input.GetButton(TAKE_OR_INTERACT_BUTTON) == false)
+        if ((Input.GetAxisRaw(HOLD) == 0 && Input.GetButton(TAKE_OR_INTERACT_BUTTON) == false) || (holdedItem != null && Vector3.Distance(this.transform.position, holdedItem.position) > interactibleDistance * 1.8f))
         {
             FirstPersonController.HoldingThing = false;
             holdedItem = null;
