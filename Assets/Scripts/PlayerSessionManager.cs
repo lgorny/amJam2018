@@ -20,6 +20,10 @@ public class PlayerSessionManager : MonoBehaviour
     public SessionRound CurrentSessionType { get; private set; }
     public List<SessionPlayer> Players { get; private set; }
 
+    public GameObject PlayerController;
+
+    public InventoryItem TestItem;
+
     private int CurrentPlayerIndex;
 
     void Start()
@@ -30,12 +34,18 @@ public class PlayerSessionManager : MonoBehaviour
     public void AddPlayer(string PlayerID, FoodPreferenceType PreferenceType)
     {
         AvaiableFoodPreferenceTypes.Remove(PreferenceType);
-        Players.Add(new SessionPlayer(PlayerID, PreferenceType));
+
+        var Player = new SessionPlayer(PlayerID, PreferenceType);
+        Player.PlayerInventory.AddItem(TestItem);
+        Players.Add(Player);
     }
 
     public void StartRound()
     {
-        StartCoroutine(StartRoundCounter());
+        var Player = Instantiate(PlayerController, Vector3.zero, Quaternion.identity);
+        Player.GetComponentInChildren<FirstPersonRaycastComponent>().CurrentPlayer = CurrentPlayer;
+
+        //StartCoroutine(StartRoundCounter());
     }
 
     public void InitNextRound()

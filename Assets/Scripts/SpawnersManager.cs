@@ -12,8 +12,24 @@ public class SpawnersManager : MonoBehaviour
     {
         Spawners = new List<SceneItemSpawner>();
         Spawners.AddRange(GameObject.FindObjectsOfType<SceneItemSpawner>());
+    }
 
-        SpawnRandomItems(5);
+    public void SpawnItems(List<InventoryItem> Items)
+    {
+        List<SceneItemSpawner> SpawnersTemp = new List<SceneItemSpawner>();
+        SpawnersTemp.AddRange(Spawners);
+
+        while (Items.Count > 0 && SpawnersTemp.Count > 0)
+        {
+            int Index = Random.Range(0, SpawnersTemp.Count - 1);
+            int ItemIndex = Random.Range(0, Items.Count - 1);
+
+            SceneItemSpawner Spawner = SpawnersTemp[Index];
+            Spawner.Spawn(Items[ItemIndex]);
+
+            SpawnersTemp.RemoveAt(Index);
+            Items.RemoveAt(ItemIndex);
+        }
     }
 
     public void SpawnRandomItems(int Number)

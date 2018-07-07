@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class SessionPlayer
 {
     private const int PointsNoOwner = 1;
@@ -23,7 +24,7 @@ public class SessionPlayer
     {
         int Points = 0;
 
-        foreach (KeyValuePair<InventoryItem, int> Item in PlayerInventory.Items)
+       /* foreach (KeyValuePair<InventoryItem, int> Item in PlayerInventory.Items)
         {
             if (Item.Key.Owner == null)
             {
@@ -33,7 +34,7 @@ public class SessionPlayer
             {
                 Points += Item.Value * Item.Key.Points * PointsOtherOwner;
             }
-        }
+        }*/
 
         return Points;
     }

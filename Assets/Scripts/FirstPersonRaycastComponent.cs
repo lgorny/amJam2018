@@ -5,7 +5,7 @@ public class FirstPersonRaycastComponent : MonoBehaviour
 {
     const string TAKE_OR_INTERACT_BUTTON = "Fire1";
     const string HOLD = "Hold";
-    public SessionPlayer CurrentPlayer { get; set; }
+    public SessionPlayer CurrentPlayer;
 
     [SerializeField] LayerMask interactibleLayers;
     [SerializeField] float interactibleDistance;
@@ -18,7 +18,12 @@ public class FirstPersonRaycastComponent : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(Input.GetAxisRaw(HOLD) == 0 && Input.GetButton(TAKE_OR_INTERACT_BUTTON) == false)
+        if (Input.GetButton("Fire2"))
+        {
+            CurrentPlayer.PlayerInventory.Items[0].Spawn(transform.position + transform.forward, Quaternion.identity);
+        }
+
+        if (Input.GetAxisRaw(HOLD) == 0 && Input.GetButton(TAKE_OR_INTERACT_BUTTON) == false)
         {
             FirstPersonController.HoldingThing = false;
             holdedItem = null;
