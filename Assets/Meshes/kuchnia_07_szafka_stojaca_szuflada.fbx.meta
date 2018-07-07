@@ -14,6 +14,7 @@ ModelImporter:
     2300000: Mesh
     3300000: Mesh
     4300000: Mesh
+    6400000: Mesh
     7400000: Take 001
     9500000: //RootNode
   externalObjects:
@@ -59,7 +60,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

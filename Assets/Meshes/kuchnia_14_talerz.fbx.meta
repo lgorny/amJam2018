@@ -1,33 +1,22 @@
 fileFormatVersion: 2
-guid: 6861f54b99c5c1843a3cd78f898a56d5
+guid: 47f4617f7d8fc32498d261ac815e66af
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Camera
-    100002: Directional Light
-    100004: //RootNode
-    100006: Mesh
-    400000: Camera
-    400002: Directional Light
-    400004: //RootNode
-    400006: Mesh
-    2000000: Camera
-    2100000: wood
-    2300000: Mesh
-    2300002: //RootNode
-    3300000: Mesh
-    3300002: //RootNode
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Default
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Mesh
-    6400000: //RootNode
     7400000: Take 001
     9500000: //RootNode
-    10800000: Directional Light
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: wood
-    second: {fileID: 2100000, guid: fd1fec3a08aab4b42bef4d6c3267d86e, type: 3}
+      name: Default
+    second: {fileID: 2100000, guid: 953adbb1d85825a4a98fdc8b15f59084, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -60,7 +49,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

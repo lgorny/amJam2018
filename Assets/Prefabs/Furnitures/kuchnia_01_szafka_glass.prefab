@@ -24,6 +24,11 @@ GameObject:
   - component: {fileID: 95079102958946370}
   - component: {fileID: 54940762046159590}
   - component: {fileID: 65574595384702780}
+  - component: {fileID: 65829677150976220}
+  - component: {fileID: 65062039008275206}
+  - component: {fileID: 65786058099714198}
+  - component: {fileID: 65491282243918316}
+  - component: {fileID: 65396830406756266}
   m_Layer: 0
   m_Name: kuchnia_01_szafka_glass
   m_TagString: Untagged
@@ -102,7 +107,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1051307541068946}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5369, y: 1.671, z: -1.872}
+  m_LocalPosition: {x: -16.03589, y: -12.986314, z: -36.463753}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4604486099105090}
@@ -187,7 +192,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: fd1fec3a08aab4b42bef4d6c3267d86e, type: 3}
+  - {fileID: 2100000, guid: 953adbb1d85825a4a98fdc8b15f59084, type: 2}
   - {fileID: 2100000, guid: e79fb3ef3b6a54c46be43d20e30663f4, type: 3}
   - {fileID: 2100000, guid: d30e4c3384bde2947b10014d428cf7a0, type: 2}
   m_StaticBatchInfo:
@@ -287,6 +292,42 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!65 &65062039008275206
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051307541068946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7955427, y: 0.032017767, z: 0.45980746}
+  m_Center: {x: -0.39934587, y: 0.2646952, z: -0.27534488}
+--- !u!65 &65396830406756266
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051307541068946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14616418, y: 0.79812306, z: 0.5028878}
+  m_Center: {x: -0.07308209, y: 0.39860895, z: -0.2538047}
+--- !u!65 &65491282243918316
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051307541068946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11635065, y: 0.79812306, z: 0.5028878}
+  m_Center: {x: -0.7389419, y: 0.39860895, z: -0.2538047}
 --- !u!65 &65574595384702780
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -297,8 +338,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7999999, y: 0.79812306, z: 0.50499874}
-  m_Center: {x: -0.39999995, y: 0.39860895, z: -0.25274923}
+  m_Size: {x: 0.7999999, y: 0.79812306, z: 0.09085423}
+  m_Center: {x: -0.39999995, y: 0.39860895, z: -0.4598215}
 --- !u!65 &65674849533627400
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -311,6 +352,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7999999, y: 0.7993743, z: 0.072100006}
   m_Center: {x: -0.39999995, y: 0.39939097, z: 0.036137503}
+--- !u!65 &65786058099714198
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051307541068946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7955427, y: 0.08613318, z: 0.5028878}
+  m_Center: {x: -0.39934587, y: 0.042614013, z: -0.2538047}
+--- !u!65 &65829677150976220
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051307541068946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7955427, y: 0.033720613, z: 0.43502003}
+  m_Center: {x: -0.39934587, y: 0.53055376, z: -0.2877386}
 --- !u!95 &95079102958946370
 Animator:
   serializedVersion: 3
