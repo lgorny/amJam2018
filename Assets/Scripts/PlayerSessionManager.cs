@@ -16,7 +16,7 @@ public class PlayerSessionManager : MonoBehaviour
 
     [SerializeField]
     private List<FoodPreferenceType> FoodPreferenceTypes;
-    private int RoundTime = 5;
+    private int RoundTime = 30;
     public List<FoodPreferenceType> AvaiableFoodPreferenceTypes { get; private set; }
 
     public SessionPlayer CurrentPlayer { get; private set; }
@@ -25,6 +25,10 @@ public class PlayerSessionManager : MonoBehaviour
 
     public GameObject PlayerController;
     public GameObject PlayerControllerInstance;
+
+    public GameObject canvas;
+
+    public GameObject PlayerStart;
 
     public PlayerStart PlayerStartUI;
 
@@ -49,7 +53,9 @@ public class PlayerSessionManager : MonoBehaviour
 
     public void StartRound()
     {
-        PlayerControllerInstance = Instantiate(PlayerController, Vector3.zero, Quaternion.identity);
+        canvas.SetActive(false);
+
+        PlayerControllerInstance = Instantiate(PlayerController, PlayerStart.transform.position, PlayerStart.transform.localRotation);
         PlayerControllerInstance.GetComponentInChildren<FirstPersonRaycastComponent>().CurrentPlayer = CurrentPlayer;
 
         StartCoroutine(StartRoundCounter());
@@ -81,6 +87,7 @@ public class PlayerSessionManager : MonoBehaviour
         {
             CurrentPlayer = Players[CurrentPlayerIndex];
 
+            canvas.SetActive(true);
             PlayerStartUI.UpdateContent();
             PlayerStartUI.GetComponent<Canvas>().enabled = true;
         }
@@ -93,7 +100,7 @@ public class PlayerSessionManager : MonoBehaviour
         }
         else
         {
-            //END GAME?
+            canvas.SetActive(true);
             ScoreUIObject.GetComponent<Canvas>().enabled = true;
             ScoreUIObject.enabled = true;
         }
