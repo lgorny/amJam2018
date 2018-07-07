@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.45140398, g: 0.5008938, b: 0.5723168, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -113,6 +113,292 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &246586424
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 38ecbd1fd0bc76a49ab0f1eb288534ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.673
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 38ecbd1fd0bc76a49ab0f1eb288534ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 38ecbd1fd0bc76a49ab0f1eb288534ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.479
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 38ecbd1fd0bc76a49ab0f1eb288534ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 38ecbd1fd0bc76a49ab0f1eb288534ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 38ecbd1fd0bc76a49ab0f1eb288534ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 38ecbd1fd0bc76a49ab0f1eb288534ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 38ecbd1fd0bc76a49ab0f1eb288534ea, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 38ecbd1fd0bc76a49ab0f1eb288534ea, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fd1fec3a08aab4b42bef4d6c3267d86e, type: 3}
+    - target: {fileID: 2300000, guid: 38ecbd1fd0bc76a49ab0f1eb288534ea, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e79fb3ef3b6a54c46be43d20e30663f4, type: 3}
+    - target: {fileID: 2300000, guid: 38ecbd1fd0bc76a49ab0f1eb288534ea, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: d30e4c3384bde2947b10014d428cf7a0, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 38ecbd1fd0bc76a49ab0f1eb288534ea, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1 &406942609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 406942610}
+  - component: {fileID: 406942611}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &406942610
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406942609}
+  m_LocalRotation: {x: 0.8923991, y: 0.09904576, z: -0.3696438, w: 0.23911764}
+  m_LocalPosition: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1677793952}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &406942611
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 10800000, guid: d997a9a84cf67f646a3d7ae26ed41ac0,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406942609}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.1999999
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!1 &420095286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 420095287}
+  - component: {fileID: 420095288}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &420095287
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 420095286}
+  m_LocalRotation: {x: 0, y: -0.99904823, z: 0.043619387, w: 0}
+  m_LocalPosition: {x: -0, y: 0.75, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1677793952}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &420095288
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2000000, guid: d997a9a84cf67f646a3d7ae26ed41ac0,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 420095286}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 26.991467
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!1001 &470092730
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.475
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.479
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fd1fec3a08aab4b42bef4d6c3267d86e, type: 3}
+    - target: {fileID: 100004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_Name
+      value: kuchnia_01_szafka_wiszaca (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1001 &1130032242
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.673
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.479
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fd1fec3a08aab4b42bef4d6c3267d86e, type: 3}
+    - target: {fileID: 100004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_Name
+      value: kuchnia_01_szafka_wiszaca (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &1229786567
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,6 +426,193 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2117513634}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1447232252
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.276
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.479
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fd1fec3a08aab4b42bef4d6c3267d86e, type: 3}
+    - target: {fileID: 100004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_Name
+      value: kuchnia_01_szafka_wiszaca (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1001 &1663836717
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.872
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.479
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.2588186
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.965926
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_Name
+      value: kuchnia_02_szafka_wiszaca_drzwi (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fd1fec3a08aab4b42bef4d6c3267d86e, type: 3}
+    - target: {fileID: 2300002, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e79fb3ef3b6a54c46be43d20e30663f4, type: 3}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 30.000002
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1 &1677793950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1677793952}
+  - component: {fileID: 1677793951}
+  m_Layer: 0
+  m_Name: kuchnia_02_szafka_wiszaca_drzwi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1677793951
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: d997a9a84cf67f646a3d7ae26ed41ac0,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1677793950}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &1677793952
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1677793950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.519699, y: -11.104461, z: -33.79138}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 420095287}
+  - {fileID: 406942610}
+  - {fileID: 1688189157}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1688189156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100008, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1688189157}
+  m_Layer: 0
+  m_Name: Texture Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1688189157
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400008, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688189156}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1677793952}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1821153088
 GameObject:
@@ -207,6 +680,160 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1001 &2007307452
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.276
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.479
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_Name
+      value: kuchnia_02_szafka_wiszaca_drzwi (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fd1fec3a08aab4b42bef4d6c3267d86e, type: 3}
+    - target: {fileID: 2300002, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e79fb3ef3b6a54c46be43d20e30663f4, type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1001 &2099487679
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.872
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.479
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fd1fec3a08aab4b42bef4d6c3267d86e, type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6861f54b99c5c1843a3cd78f898a56d5, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1001 &2105093038
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.475
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.479
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_Name
+      value: kuchnia_02_szafka_wiszaca_drzwi (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fd1fec3a08aab4b42bef4d6c3267d86e, type: 3}
+    - target: {fileID: 2300002, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e79fb3ef3b6a54c46be43d20e30663f4, type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d997a9a84cf67f646a3d7ae26ed41ac0, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &2117513632
 GameObject:
   m_ObjectHideFlags: 0
