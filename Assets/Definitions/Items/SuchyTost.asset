@@ -18,6 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7c9dae82daa60484f82e3275f5333f66, type: 2}
   Points: 1
   Prefab: {fileID: 1629238709429472, guid: 1bb0c6f3191249344a9ae111b41b3440, type: 2}
+  InventoryScale: {x: 300, y: 300, z: 300}
   Owner:
     PlayerID: 
     PlayerInventory:

@@ -7,16 +7,23 @@ public class InventoryList : MonoBehaviour
     // Use this for initialization
     private PlayerSessionManager SessionManager;
 
+    float t = 0;
+
     void Start()
     {
-        SessionManager = FindObjectOfType<PlayerSessionManager>();        
-		
-	}
+        SessionManager = FindObjectOfType<PlayerSessionManager>();
+        UpdateList();
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        UpdateList();
+        t += Time.deltaTime;
+        if (t > 1f)
+        {
+            UpdateList();
+            t = 0;
+        }
 
     }
 
@@ -37,8 +44,11 @@ public class InventoryList : MonoBehaviour
             var it = Instantiate(SessionManager.CurrentPlayer.PlayerInventory.Items[i].Prefab);
             it.transform.parent = transform;
             it.transform.localPosition = new Vector3(i % 2 * 50f, -50f * currY, 0f);
-            it.transform.localScale = new Vector3(500f, 500f, 500f);
+            it.transform.localScale = SessionManager.CurrentPlayer.PlayerInventory.Items[i].InventoryScale;
+            it.transform.localRotation = Quaternion.identity;
             it.layer = 12;
+
+            Destroy(it.GetComponent<Rigidbody>());
 
             var c = it.GetComponentsInChildren<Transform>();
 
