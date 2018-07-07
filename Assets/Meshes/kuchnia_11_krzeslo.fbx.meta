@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 7e3de300d1b0265428d89fccc996b9ed
+guid: 473f2032e57cba048b8cb7c4fd1dad50
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Default
-    2100002: wood1
+    2100000: 1
+    2100002: 3
     2300000: //RootNode
     3300000: //RootNode
     4300000: Mesh
@@ -16,13 +16,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Default
-    second: {fileID: 2100000, guid: 97ca2e782977c674ba3083e203278549, type: 3}
+      name: 1
+    second: {fileID: 2100000, guid: 83d41c9b01d14f94892846254d9886de, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: wood1
-    second: {fileID: 2100000, guid: 83d41c9b01d14f94892846254d9886de, type: 2}
+      name: 3
+    second: {fileID: 2100000, guid: 97ca2e782977c674ba3083e203278549, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
