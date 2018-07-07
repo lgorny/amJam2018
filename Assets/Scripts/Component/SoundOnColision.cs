@@ -9,7 +9,7 @@ public class SoundOnColision : MonoBehaviour
     Vector3 velocity;
     Vector3 angularVelocity;
 
-    [SerializeField] AudioClip[] clips;
+    [SerializeField] AudioClip[] clips = new AudioClip[0];
     [SerializeField] bool AlsoScrape;
 
     [SerializeField] bool AlsoOnSlow = false;
@@ -38,11 +38,14 @@ public class SoundOnColision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        CachedAudioSource.PlayOneShot(clips[Random.Range(0, clips.Length)], collision.relativeVelocity.magnitude);
+        if(clips.Length > 0)
+            CachedAudioSource.PlayOneShot(clips[Random.Range(0, clips.Length)], collision.relativeVelocity.magnitude);
     }
 
     private void FixedUpdate()
     {
+        if (clips.Length == 0) return;
+
         if (AlsoOnAngularSlow && CachedRigidbody.angularVelocity.magnitude < .1f && angularVelocity.magnitude > .1f)
         {
             CachedAudioSource.PlayOneShot(clips[Random.Range(0, clips.Length)], (angularVelocity.magnitude - CachedRigidbody.angularVelocity.magnitude) * .5f);

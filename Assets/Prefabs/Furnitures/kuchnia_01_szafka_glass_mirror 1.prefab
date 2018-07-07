@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4501239131500270}
   - component: {fileID: 33330287704167950}
   - component: {fileID: 23137608447367718}
-  - component: {fileID: 64572509702891322}
   m_Layer: 11
   m_Name: Mesh
   m_TagString: Untagged
@@ -295,20 +294,6 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!64 &64572509702891322
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1128723483369548}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 3d2676c140fc691419076e65bf48cf0a, type: 3}
 --- !u!65 &65154162883863244
 BoxCollider:
   m_ObjectHideFlags: 1
