@@ -18,4 +18,14 @@ public class Inventory
 
         Items.Add(Item);
     }
+
+    public void SpawnSelected(Vector3 Position)
+    {
+        if (Items.Count > 0)
+        {
+            Items[Items.Count -1].Spawn(Position);
+            RemoveItem(Items[Items.Count - 1]);
+        }
+
+    }
 }

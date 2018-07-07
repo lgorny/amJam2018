@@ -92,7 +92,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967263
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 224696916537532228}
   - component: {fileID: 222542351182574354}
   - component: {fileID: 114171160784582866}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: List
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 223174026468080700}
   - component: {fileID: 114087313100911058}
   - component: {fileID: 114579862668224474}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 223294532575771574}
   - component: {fileID: 114484317300231760}
   - component: {fileID: 114296097673272062}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 224502640614528436}
   - component: {fileID: 222597167476002736}
   - component: {fileID: 114603235308238650}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 4812730140040490}
   - component: {fileID: 20261663560514150}
   - component: {fileID: 124388343550796998}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 224250632643367254}
   - component: {fileID: 222418376905462396}
   - component: {fileID: 114060499180160390}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4814166485115890}
   - component: {fileID: 114325392162663850}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 224003566512024448}
   - component: {fileID: 222649284631526848}
   - component: {fileID: 114873518094710756}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: NextPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 224249787915234110}
   - component: {fileID: 222953023425000030}
   - component: {fileID: 114911426086308996}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: RoundEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +623,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1775350978994132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -110, y: 80, z: 0}
+  m_LocalPosition: {x: -110, y: 40, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224696916537532228}
@@ -653,7 +653,7 @@ Camera:
   m_Depth: 100
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 4096
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
