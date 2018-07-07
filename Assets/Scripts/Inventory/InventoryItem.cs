@@ -11,6 +11,8 @@ public class InventoryItem : ScriptableObject
     public int Points;
     public GameObject Prefab;
 
+    public SessionPlayer Owner;
+
     public void Spawn(Vector3 Position, Quaternion Rotation)
     {
         SceneItem Item = Instantiate(Prefab).GetComponent<SceneItem>();

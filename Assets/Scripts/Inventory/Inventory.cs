@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory
 {
     public Dictionary<InventoryItem, int> Items;
 
@@ -24,17 +24,5 @@ public class Inventory : MonoBehaviour
             Items[Item] += 1;
         else
             Items.Add(Item, 1);
-    }
-
-    public int GetPoints()
-    {
-        int Points = 0;
-
-        foreach (KeyValuePair<InventoryItem, int> Item in Items)
-        {
-            Points += Item.Key.Points * Item.Value;
-        }
-
-        return Points;
     }
 }
