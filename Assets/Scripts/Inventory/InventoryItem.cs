@@ -13,11 +13,10 @@ public class InventoryItem : ScriptableObject
 
     public SessionPlayer Owner;
 
-    public void Spawn(Vector3 Position, Quaternion Rotation)
+    public void Spawn(Vector3 Position)
     {
         SceneItem Item = Instantiate(Prefab).GetComponent<SceneItem>();
         Item.transform.position = Position;
-        Item.transform.rotation = Rotation;
 
         Item.Init(this);
     }

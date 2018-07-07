@@ -9,6 +9,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3285763e08f2829448e405e0e52f2797, type: 3}
-  m_Name: Friut
+  m_Name: Gotowiec
   m_EditorClassIdentifier: 
-  DisplayName: Owoc
+  DisplayName: Gotowiec

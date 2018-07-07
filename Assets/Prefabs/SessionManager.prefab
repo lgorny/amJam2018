@@ -52,13 +52,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items:
+  - {fileID: 11400000, guid: ebfa0b4f7c32bbb45b87236fa037ef10, type: 2}
+  - {fileID: 11400000, guid: 20c0a18b389683d478d9a26b11a4b85e, type: 2}
+  - {fileID: 11400000, guid: c5c0dd33b2c6bf947a1150b9a374952b, type: 2}
+  - {fileID: 11400000, guid: c29a884477cc689458b40f0afefa36f9, type: 2}
+  - {fileID: 11400000, guid: af22c2a2ec6db6a409ba9688061ecc13, type: 2}
+  - {fileID: 11400000, guid: b310d92adfe241c44a28ccad41e9481a, type: 2}
+  - {fileID: 11400000, guid: 84e3581a21349a74098d6b33e7bdcb62, type: 2}
+  - {fileID: 11400000, guid: 152b510f4e0fa0b47b390b4eade95806, type: 2}
   - {fileID: 11400000, guid: 5147e568870a0bb468fe495dd4ae9ed8, type: 2}
+  - {fileID: 11400000, guid: 2d6a966de38a5fa46a1072105182c627, type: 2}
   FoodPreferenceTypes:
-  - {fileID: 11400000, guid: 552574edd15f51a419b25086a018cbcf, type: 2}
-  - {fileID: 11400000, guid: 7c9dae82daa60484f82e3275f5333f66, type: 2}
-  - {fileID: 11400000, guid: e3308e074d1973145adfc5f49455323e, type: 2}
+  - {fileID: 11400000, guid: 6e620c607bd7ad74f946ad87103a2ebc, type: 2}
   - {fileID: 11400000, guid: cbbe2485decc79d4cbd3632bb9761d60, type: 2}
-  - {fileID: 11400000, guid: d2203ff6486ea424aaaf3cc7a8ee77ed, type: 2}
+  - {fileID: 11400000, guid: e3308e074d1973145adfc5f49455323e, type: 2}
+  - {fileID: 11400000, guid: 7c9dae82daa60484f82e3275f5333f66, type: 2}
+  - {fileID: 11400000, guid: 552574edd15f51a419b25086a018cbcf, type: 2}
   PlayerController: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   PlayerControllerInstance: {fileID: 0}
-  TestItem: {fileID: 11400000, guid: 5147e568870a0bb468fe495dd4ae9ed8, type: 2}
+  PlayerStartUI: {fileID: 0}

@@ -18,9 +18,9 @@ public class FirstPersonRaycastComponent : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetButton("Fire2"))
+        if (Input.GetButtonDown("Fire2"))
         {
-            CurrentPlayer.PlayerInventory.Items[0].Spawn(transform.position + transform.forward, Quaternion.identity);
+            CurrentPlayer.PlayerInventory.SpawnSelected(transform.position + transform.forward);
         }
 
         if ((Input.GetAxisRaw(HOLD) == 0 && Input.GetButton(TAKE_OR_INTERACT_BUTTON) == false) || (holdedItem != null && Vector3.Distance(this.transform.position, holdedItem.position) > interactibleDistance * 1.8f))
@@ -51,6 +51,7 @@ public class FirstPersonRaycastComponent : MonoBehaviour
                     {
                         if (hitItem.ItemDescription.CanIEatThat(CurrentPlayer.PreferenceType))
                         {
+                            CurrentPlayer.PlayerInventory.AddItem(hitItem.ItemDescription);
                             hitItem.Collect();
                         }
                     }
