@@ -29,7 +29,7 @@ public class InventoryItem : ScriptableObject
     {
         for (int i = 0; i < AcceptablePreferences.Length; i++)
         {
-            if (AcceptablePreferences[i].GetType() == Preference.GetType())
+            if (AcceptablePreferences[i].DisplayName == Preference.DisplayName)
                 return true;
         }
 

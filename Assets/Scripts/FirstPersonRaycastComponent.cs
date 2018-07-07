@@ -21,7 +21,7 @@ public class FirstPersonRaycastComponent : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire2"))
         {
-            var g = CurrentPlayer.PlayerInventory.SpawnSelected(transform.position + transform.forward);
+            var g = CurrentPlayer.PlayerHideInventory.SpawnSelected(transform.position + transform.forward);
             if (g)
             {
                 var rb = g.GetComponent<Rigidbody>();
@@ -63,11 +63,12 @@ public class FirstPersonRaycastComponent : MonoBehaviour
                     HUD.DisplayOverItem(hitItem);
                     if (Input.GetButtonDown(TAKE_OR_INTERACT_BUTTON))
                     {
-                        if (hitItem.ItemDescription.CanIEatThat(CurrentPlayer.PreferenceType))
-                        {
+                        if(hitItem.ItemDescription.Owner == CurrentPlayer)                        
+                            CurrentPlayer.PlayerHideInventory.AddItem(hitItem.ItemDescription);
+                        else
                             CurrentPlayer.PlayerInventory.AddItem(hitItem.ItemDescription);
-                            hitItem.Collect();
-                        }
+
+                        hitItem.Collect();                        
                     }
                     break;
                 case "Interactable":

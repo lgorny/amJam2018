@@ -26,5 +26,7 @@ public class HUD : MonoBehaviour
 
         TimeText.text = time;
 
+        ScoreText.text = "Punkty: " + SessionManager.CurrentPlayer.GetPoints();
+
     }
 }

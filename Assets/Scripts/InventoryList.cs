@@ -39,12 +39,12 @@ public class InventoryList : MonoBehaviour
 
         float currY = 0f;
 
-        for (int i = 0; i < SessionManager.CurrentPlayer.PlayerInventory.Items.Count; i++)
+        for (int i = 0; i < SessionManager.CurrentPlayer.PlayerHideInventory.Items.Count; i++)
         {           
-            var it = Instantiate(SessionManager.CurrentPlayer.PlayerInventory.Items[i].Prefab);
+            var it = Instantiate(SessionManager.CurrentPlayer.PlayerHideInventory.Items[i].Prefab);
             it.transform.parent = transform;
             it.transform.localPosition = new Vector3(i % 2 * 50f, -50f * currY, 0f);
-            it.transform.localScale = SessionManager.CurrentPlayer.PlayerInventory.Items[i].InventoryScale;
+            it.transform.localScale = SessionManager.CurrentPlayer.PlayerHideInventory.Items[i].InventoryScale;
             it.transform.localRotation = Quaternion.identity;
             it.layer = 12;
 

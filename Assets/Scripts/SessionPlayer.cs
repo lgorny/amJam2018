@@ -7,9 +7,12 @@ public class SessionPlayer
 {
     private const int PointsNoOwner = 1;
     private const int PointsOtherOwner = 3;
+    private const int PointsHidePenalty = 1;
+    private const int PointsWrongItemPenalty = 1;
 
     public string PlayerID;
     public Inventory PlayerInventory;
+    public Inventory PlayerHideInventory;
     public FoodPreferenceType PreferenceType;
 
     public SessionPlayer(string PlayerID, FoodPreferenceType PreferenceType)
@@ -18,6 +21,7 @@ public class SessionPlayer
         this.PreferenceType = PreferenceType;
 
         PlayerInventory = new Inventory();
+        PlayerHideInventory = new Inventory();
     }
 
     public int GetPoints()
@@ -26,15 +30,25 @@ public class SessionPlayer
 
         for (int i = 0; i < PlayerInventory.Items.Count; i++)
         {
-            if (PlayerInventory.Items[i].Owner == null)
+            if (PlayerInventory.Items[i].CanIEatThat(PreferenceType))
             {
-                Points += PlayerInventory.Items[i].Points * PointsNoOwner;
+                if (PlayerInventory.Items[i].Owner == null)
+                {
+                    Points += PlayerInventory.Items[i].Points * PointsNoOwner;
+                }
+                else if (PlayerInventory.Items[i].Owner != this)
+                {
+                    Points += PlayerInventory.Items[i].Points * PointsOtherOwner;
+                }
             }
-            else if (PlayerInventory.Items[i].Owner != this)
+            else
             {
-                Points += PlayerInventory.Items[i].Points * PointsOtherOwner;
+                Points -= PointsWrongItemPenalty;
             }
+
         }
+
+        Points -= PlayerHideInventory.Items.Count * PointsHidePenalty;
 
         return Points;
     }

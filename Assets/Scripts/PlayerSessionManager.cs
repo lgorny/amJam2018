@@ -16,7 +16,16 @@ public class PlayerSessionManager : MonoBehaviour
 
     [SerializeField]
     private List<FoodPreferenceType> FoodPreferenceTypes;
+
+    [SerializeField]
     private int RoundTime = 30;
+    [SerializeField]
+    private int RoundNumber = 30;
+    [SerializeField]
+    private int PlayersNumber = 5;
+    [SerializeField]
+    private int NumberOfItemsToHide = 3;
+
     public List<FoodPreferenceType> AvaiableFoodPreferenceTypes { get; private set; }
 
     public SessionPlayer CurrentPlayer { get; private set; }
@@ -67,14 +76,11 @@ public class PlayerSessionManager : MonoBehaviour
         {
             var p = Players[i];
 
-            for (int j = 0; j < Players.Count; j++)
+            for (int j = 0; j < NumberOfItemsToHide; j++)
             {
-                if (p != Players[j])
-                {
-                    var item = Instantiate(GetRandomItemByFoodPreference(Players[j].PreferenceType));
-                    item.Owner = p;
-                    p.PlayerInventory.AddItem(item);
-                }
+                var item = Instantiate(GetRandomItemByDifferentFoodPreference(p.PreferenceType));
+                item.Owner = p;
+                p.PlayerHideInventory.AddItem(item);
             }
         }
     }
@@ -142,6 +148,20 @@ public class PlayerSessionManager : MonoBehaviour
         for (int i = 0; i < Items.Count; i++)
         {
             if (Items[i].CanIEatThat(Preference))
+            {
+                AcceptableItems.Add(Items[i]);
+            }
+        }
+
+        return AcceptableItems[Random.Range(0, AcceptableItems.Count - 1)];
+    }
+
+    public InventoryItem GetRandomItemByDifferentFoodPreference(FoodPreferenceType Preference)
+    {
+        List<InventoryItem> AcceptableItems = new List<InventoryItem>();
+        for (int i = 0; i < Items.Count; i++)
+        {
+            if (!Items[i].CanIEatThat(Preference))
             {
                 AcceptableItems.Add(Items[i]);
             }
