@@ -6,7 +6,7 @@ public class SceneItemSpawner : MonoBehaviour
 {
     public void Spawn(InventoryItem ItemDescription)
     {
-        ItemDescription.Spawn(transform.position, transform.rotation);
+        ItemDescription.Spawn(transform.position);
         Destroy(gameObject);
     }
 

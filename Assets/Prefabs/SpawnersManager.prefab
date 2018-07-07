@@ -52,4 +52,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnableRandomItems:
+  - {fileID: 11400000, guid: ebfa0b4f7c32bbb45b87236fa037ef10, type: 2}
+  - {fileID: 11400000, guid: 20c0a18b389683d478d9a26b11a4b85e, type: 2}
+  - {fileID: 11400000, guid: c5c0dd33b2c6bf947a1150b9a374952b, type: 2}
+  - {fileID: 11400000, guid: c29a884477cc689458b40f0afefa36f9, type: 2}
+  - {fileID: 11400000, guid: af22c2a2ec6db6a409ba9688061ecc13, type: 2}
+  - {fileID: 11400000, guid: b310d92adfe241c44a28ccad41e9481a, type: 2}
+  - {fileID: 11400000, guid: 84e3581a21349a74098d6b33e7bdcb62, type: 2}
+  - {fileID: 11400000, guid: 152b510f4e0fa0b47b390b4eade95806, type: 2}
   - {fileID: 11400000, guid: 5147e568870a0bb468fe495dd4ae9ed8, type: 2}
+  - {fileID: 11400000, guid: 2d6a966de38a5fa46a1072105182c627, type: 2}
