@@ -20,14 +20,22 @@ public class FirstPersonRaycastComponent : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire2"))
         {
-            CurrentPlayer.PlayerInventory.SpawnSelected(transform.position + transform.forward);
+            var g = CurrentPlayer.PlayerInventory.SpawnSelected(transform.position + transform.forward);
+            if (g)
+            {
+                var rb = g.GetComponent<Rigidbody>();
+                if (rb)
+                {
+                    rb.AddForce(this.transform.forward * 2000f);
+                }
+            }
             return;
         }
     }
 
     void FixedUpdate()
     {
-        
+
         if ((Input.GetAxisRaw(HOLD) == 0 && Input.GetButton(TAKE_OR_INTERACT_BUTTON) == false) || (holdedItem != null && Vector3.Distance(this.transform.position, holdedItem.position) > interactibleDistance * 1.8f))
         {
             FirstPersonController.HoldingThing = false;
