@@ -11,6 +11,8 @@ public class InventoryItem : ScriptableObject
     public int Points;
     public GameObject Prefab;
 
+    public Vector3 InventoryScale = new Vector3(500f, 500f, 500f);
+
     [HideInInspector]
     public SessionPlayer Owner;
 
