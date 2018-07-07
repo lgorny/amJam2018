@@ -7,6 +7,7 @@ ModelImporter:
     400000: //RootNode
     2100000: 1
     2100002: 3
+    2100004: 4
     2300000: //RootNode
     3300000: //RootNode
     4300000: Mesh
@@ -24,6 +25,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: 3
     second: {fileID: 2100000, guid: 97ca2e782977c674ba3083e203278549, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 4
+    second: {fileID: 2100000, guid: 814a9aaa25541474d96811b529296f49, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
