@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 74392a9619bb8d64ca21203196863ede
+guid: 5c0cb27e0d1c2684591d3996764c63fe
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -9,7 +9,6 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Mesh
-    6400000: //RootNode
     7400000: Take 001
     9500000: //RootNode
   externalObjects:
@@ -17,7 +16,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Default
-    second: {fileID: 2100000, guid: e79fb3ef3b6a54c46be43d20e30663f4, type: 3}
+    second: {fileID: 2100000, guid: ca30ca7e228397448a701a1fb046d887, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -50,7 +49,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
