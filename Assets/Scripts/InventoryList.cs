@@ -36,8 +36,8 @@ public class InventoryList : MonoBehaviour
         {           
             var it = Instantiate(SessionManager.CurrentPlayer.PlayerInventory.Items[i].Prefab);
             it.transform.parent = transform;
-            it.transform.localPosition = new Vector3(i % 2 * 50f, 50f * currY, 0f);
-            it.transform.localScale = new Vector3(20f, 20f, 20f);
+            it.transform.localPosition = new Vector3(i % 2 * 50f, -50f * currY, 0f);
+            it.transform.localScale = new Vector3(500f, 500f, 500f);
             it.layer = 12;
 
             if (i % 2 == 1)
