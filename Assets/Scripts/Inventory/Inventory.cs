@@ -19,15 +19,18 @@ public class Inventory
         Items.Add(Item);
     }
 
-    public void SpawnSelected(Vector3 Position)
+    public GameObject SpawnSelected(Vector3 Position)
     {
         if (Items.Count > 0)
         {
 
             Debug.Log("Spawn:" + Items[Items.Count - 1].name);
-            Items[Items.Count -1].Spawn(Position);
+            GameObject g = Items[Items.Count -1].Spawn(Position);
             RemoveItem(Items[Items.Count - 1]);
+            return g;
         }
+
+        return null;
 
     }
 }

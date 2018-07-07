@@ -14,12 +14,13 @@ public class InventoryItem : ScriptableObject
     [HideInInspector]
     public SessionPlayer Owner;
 
-    public void Spawn(Vector3 Position)
+    public GameObject Spawn(Vector3 Position)
     {
         SceneItem Item = Instantiate(Prefab).GetComponent<SceneItem>();
         Item.transform.position = Position;
 
         Item.Init(this);
+        return Item.gameObject;
     }
 
     public bool CanIEatThat(FoodPreferenceType Preference)
