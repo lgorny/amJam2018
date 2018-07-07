@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 9227c37d669b47549aa1400139bf17db
+=======
+guid: 29b382c7b9a4e12439b3a669a71b9f34
+>>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
 =======
 guid: 29b382c7b9a4e12439b3a669a71b9f34
 >>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
@@ -11,7 +15,11 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     enableMipMap: 1
+=======
+    enableMipMap: 0
+>>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
 =======
     enableMipMap: 0
 >>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
@@ -38,6 +46,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     filterMode: -1
     aniso: -1
     mipBias: -1
@@ -49,6 +58,8 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 0
 =======
+=======
+>>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
     filterMode: 2
     aniso: -1
     mipBias: -1
@@ -59,12 +70,16 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
+<<<<<<< HEAD
+>>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
+=======
 >>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
+<<<<<<< HEAD
 <<<<<<< HEAD
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -73,12 +88,17 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 0
 =======
+=======
+>>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
   spriteBorder: {x: 9, y: 9, z: 9, w: 9}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
+<<<<<<< HEAD
+>>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
+=======
 >>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
   textureShape: 1
   singleChannelComponent: 0
@@ -92,8 +112,11 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
 <<<<<<< HEAD
+<<<<<<< HEAD
     textureCompression: 1
 =======
+=======
+>>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
     textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
@@ -106,6 +129,9 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
+<<<<<<< HEAD
+>>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
+=======
 >>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
     compressionQuality: 50
     crunchedCompression: 0
@@ -119,7 +145,11 @@ TextureImporter:
     physicsShape: []
     bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
     spriteID: 
+=======
+    spriteID: fb3487179067a1c428959567a17a4305
+>>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
 =======
     spriteID: fb3487179067a1c428959567a17a4305
 >>>>>>> bf43f1a1755eb669e852fd49cdd1dc71bc75abff
