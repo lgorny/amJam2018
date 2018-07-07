@@ -24,17 +24,17 @@ public class SessionPlayer
     {
         int Points = 0;
 
-       /* foreach (KeyValuePair<InventoryItem, int> Item in PlayerInventory.Items)
+        for (int i = 0; i < PlayerInventory.Items.Count; i++)
         {
-            if (Item.Key.Owner == null)
+            if (PlayerInventory.Items[i].Owner == null)
             {
-                Points += Item.Value * Item.Key.Points * PointsNoOwner;
+                Points += PlayerInventory.Items[i].Points * PointsNoOwner;
             }
-            else if (Item.Key.Owner != this)
+            else if (PlayerInventory.Items[i].Owner != this)
             {
-                Points += Item.Value * Item.Key.Points * PointsOtherOwner;
+                Points += PlayerInventory.Items[i].Points * PointsOtherOwner;
             }
-        }*/
+        }
 
         return Points;
     }
