@@ -4,16 +4,33 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class FirstPersonRaycastComponent : MonoBehaviour
 {
     const string TAKE_OR_INTERACT_BUTTON = "Fire1";
+    const string HOLD = "Hold";
+    public SessionPlayer CurrentPlayer { get; set; }
 
     [SerializeField] LayerMask interactibleLayers;
     [SerializeField] float interactibleDistance;
     [SerializeField] float force;
 
+    [SerializeField] HUDController HUD;
+
+    Rigidbody holdedItem;
+    Vector3 point;
+
     void FixedUpdate()
     {
-        if(!Input.GetButton(TAKE_OR_INTERACT_BUTTON))
+        if(Input.GetAxisRaw(HOLD) == 0 && Input.GetButton(TAKE_OR_INTERACT_BUTTON) == false)
         {
             FirstPersonController.HoldingThing = false;
+            holdedItem = null;
+            HUD.DisplayNone();
+        }
+        else if (holdedItem != null)
+        {
+            HUD.DisplayOverInteractable(holdedItem.gameObject);
+            holdedItem.AddForceAtPosition(
+                            transform.TransformVector(new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")) * force / Time.deltaTime),
+                            point
+                            );
         }
 
         RaycastHit rh;
@@ -23,19 +40,29 @@ public class FirstPersonRaycastComponent : MonoBehaviour
             switch (LayerMask.LayerToName(rh.collider.gameObject.layer))
             {
                 case "Item":
+                    var hitItem = rh.collider.gameObject.GetComponent<SceneItem>();
+                    HUD.DisplayOverItem(hitItem);
                     if (Input.GetButtonDown(TAKE_OR_INTERACT_BUTTON))
                     {
-                        Debug.LogWarning("Taken " + rh.collider.gameObject.name);
+                        if (hitItem.ItemDescription.CanIEatThat(CurrentPlayer.PreferenceType))
+                        {
+                            hitItem.Collect();
+                        }
                     }
                     break;
                 case "Interactable":
-                    if (Input.GetButton(TAKE_OR_INTERACT_BUTTON))
+                    holdedItem = rh.collider.gameObject.GetComponent<Rigidbody>();
+                    HUD.DisplayOverInteractable(rh.collider.gameObject);
+                    if (Input.GetAxisRaw(HOLD) != 0 || Input.GetButton(TAKE_OR_INTERACT_BUTTON))
                     {
                         FirstPersonController.HoldingThing = true;
-                        rh.collider.gameObject.GetComponent<Rigidbody>().AddForceAtPosition(
-                            transform.TransformVector(new Vector3(-Input.GetAxis("Vertical"), Input.GetAxis("Horizontal")) * force / Time.deltaTime),
-                            rh.transform.InverseTransformPoint(rh.point)
-                            );
+                        point = rh.transform.TransformPoint(rh.point);
+                    }
+                    break;
+                default:
+                    if (!FirstPersonController.HoldingThing)
+                    {
+                        HUD.DisplayNone();
                     }
                     break;
             }
