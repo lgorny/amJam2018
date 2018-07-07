@@ -9,11 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b0efd4722410249ae98d4a53f1aae7, type: 3}
-  m_Name: Item1
+  m_Name: Awokado
   m_EditorClassIdentifier: 
   Category:
   - {fileID: 11400000, guid: fd334687ad9fae941b32b9ad5cc1c92f, type: 2}
   AcceptablePreferences:
-  - {fileID: 11400000, guid: d2203ff6486ea424aaaf3cc7a8ee77ed, type: 2}
-  Points: 0
+  - {fileID: 11400000, guid: 552574edd15f51a419b25086a018cbcf, type: 2}
+  - {fileID: 11400000, guid: 7c9dae82daa60484f82e3275f5333f66, type: 2}
+  Points: 1
   Prefab: {fileID: 1376385694709262, guid: 30a66388a60b40346af766b6fec6e4ec, type: 2}
+  Owner:
+    PlayerID: 
+    PlayerInventory:
+      Items: []
+    PreferenceType: {fileID: 0}

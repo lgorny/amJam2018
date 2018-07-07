@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b0efd4722410249ae98d4a53f1aae7, type: 3}
+  m_Name: Banan
+  m_EditorClassIdentifier: 
+  Category:
+  - {fileID: 11400000, guid: fd334687ad9fae941b32b9ad5cc1c92f, type: 2}
+  AcceptablePreferences:
+  - {fileID: 11400000, guid: e3308e074d1973145adfc5f49455323e, type: 2}
+  - {fileID: 11400000, guid: 6e620c607bd7ad74f946ad87103a2ebc, type: 2}
+  Points: 1
+  Prefab: {fileID: 1376385694709262, guid: 30a66388a60b40346af766b6fec6e4ec, type: 2}
+  Owner:
+    PlayerID: 
+    PlayerInventory:
+      Items: []
+    PreferenceType: {fileID: 0}
