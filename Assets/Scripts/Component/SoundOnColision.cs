@@ -9,6 +9,9 @@ public class SoundOnColision : MonoBehaviour
     Vector3 velocity;
     Vector3 angularVelocity;
 
+    [SerializeField] AudioClip[] clips = new AudioClip[0];
+    [SerializeField] bool AlsoScrape;
+
     [SerializeField] bool AlsoOnSlow = false;
     [SerializeField] bool AlsoOnAngularSlow = false;
 
@@ -20,29 +23,46 @@ public class SoundOnColision : MonoBehaviour
 
     private IEnumerator Start()
     {
+
+
         this.CachedAudioSource.volume = 0f;
         yield return new WaitForSeconds(.7f);
         this.CachedAudioSource.volume = 1f;
+
+        if (clips == null || clips.Length == 0)
+        {
+            clips = new AudioClip[1] { this.CachedAudioSource.clip };
+
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        CachedAudioSource.PlayOneShot(CachedAudioSource.clip, collision.relativeVelocity.magnitude);
+        if(clips.Length > 0)
+            CachedAudioSource.PlayOneShot(clips[Random.Range(0, clips.Length)], collision.relativeVelocity.magnitude);
     }
 
     private void FixedUpdate()
     {
+        if (clips.Length == 0) return;
+
         if (AlsoOnAngularSlow && CachedRigidbody.angularVelocity.magnitude < .1f && angularVelocity.magnitude > .1f)
         {
-            CachedAudioSource.PlayOneShot(CachedAudioSource.clip, (angularVelocity.magnitude - CachedRigidbody.angularVelocity.magnitude) * .5f);
+            CachedAudioSource.PlayOneShot(clips[Random.Range(0, clips.Length)], (angularVelocity.magnitude - CachedRigidbody.angularVelocity.magnitude) * .5f);
         }
 
         if (AlsoOnSlow && velocity.magnitude > .1 && CachedRigidbody.velocity.magnitude < .1)
         {
-            CachedAudioSource.PlayOneShot(CachedAudioSource.clip, (velocity.magnitude - CachedRigidbody.velocity.magnitude));
+            CachedAudioSource.PlayOneShot(clips[Random.Range(0, clips.Length)], (velocity.magnitude - CachedRigidbody.velocity.magnitude));
         }
 
         angularVelocity = CachedRigidbody.angularVelocity;
         velocity = CachedRigidbody.velocity;
+    }
+
+    private void Update()
+    {
+        if (AlsoScrape)
+            AudioMagica.Instance.SetVol(Mathf.Min(1f, (this.CachedRigidbody.velocity.magnitude * .2f)) / Vector3.Distance(this.transform.position, Camera.main.transform.position));
     }
 }

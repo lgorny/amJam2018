@@ -520,5 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e17fa4853c1bc40479d85c055d64acf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clips: []
+  AlsoScrape: 0
   AlsoOnSlow: 0
   AlsoOnAngularSlow: 1

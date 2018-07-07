@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4602068379833040}
   - component: {fileID: 33586452484368894}
   - component: {fileID: 23466167712068896}
-  - component: {fileID: 64327770413410634}
   - component: {fileID: 95950235590678170}
   - component: {fileID: 54453559513003080}
   - component: {fileID: 82763095340314220}
@@ -236,20 +235,6 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!64 &64327770413410634
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1842221187259702}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 9262dfdf8ec64c247b497a21fee6206f, type: 3}
 --- !u!65 &65032298199378822
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -476,5 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e17fa4853c1bc40479d85c055d64acf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clips: []
+  AlsoScrape: 0
   AlsoOnSlow: 0
   AlsoOnAngularSlow: 1
