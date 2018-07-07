@@ -9,6 +9,8 @@ public class HUD : MonoBehaviour
     public Text TimeText;
     public Text ScoreText;
 
+    public GameObject ListHolder;
+
     public PlayerSessionManager SessionManager;
 
     void Start ()
@@ -27,6 +29,20 @@ public class HUD : MonoBehaviour
         TimeText.text = time;
 
         ScoreText.text = "Punkty: " + SessionManager.CurrentPlayer.GetPoints();
+    }
 
+    public void UpdateList()
+    {
+        SessionManager = FindObjectOfType<PlayerSessionManager>();
+
+        var p = Instantiate(SessionManager.CurrentPlayer.PreferenceType.ItemsList);
+
+        if (ListHolder.transform.childCount > 0)
+            Destroy(ListHolder.transform.GetChild(0).gameObject);
+
+        p.transform.parent = ListHolder.transform;
+        p.transform.localPosition = Vector3.zero;
+        p.transform.localScale = new Vector3(300, 300, 300);
+        p.transform.localRotation = Quaternion.identity;
     }
 }
