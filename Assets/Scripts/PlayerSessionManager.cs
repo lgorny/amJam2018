@@ -16,7 +16,7 @@ public class PlayerSessionManager : MonoBehaviour
 
     [SerializeField]
     private List<FoodPreferenceType> FoodPreferenceTypes;
-    private int RoundTime = 15;
+    private int RoundTime = 5;
     public List<FoodPreferenceType> AvaiableFoodPreferenceTypes { get; private set; }
 
     public SessionPlayer CurrentPlayer { get; private set; }
@@ -27,6 +27,10 @@ public class PlayerSessionManager : MonoBehaviour
     public GameObject PlayerControllerInstance;
 
     public PlayerStart PlayerStartUI;
+
+    public ScoreUI ScoreUIObject;
+
+    public int Timeleft;
 
     private int CurrentPlayerIndex;
 
@@ -90,6 +94,8 @@ public class PlayerSessionManager : MonoBehaviour
         else
         {
             //END GAME?
+            ScoreUIObject.GetComponent<Canvas>().enabled = true;
+            ScoreUIObject.enabled = true;
         }
     }
 
@@ -115,6 +121,7 @@ public class PlayerSessionManager : MonoBehaviour
     {
         for (int i = RoundTime; i >= 0 ; i--)
         {
+            Timeleft = i;
             yield return new WaitForSeconds(1f);
             Debug.Log(i);
         }
