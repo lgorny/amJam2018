@@ -33,9 +33,9 @@ public class FirstPersonRaycastComponent : MonoBehaviour
         {
             HUD.DisplayOverInteractable(holdedItem.gameObject);
             holdedItem.AddForceAtPosition(
-                            transform.TransformVector(new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")) * force / Time.deltaTime),
-                            point
-                            );
+                transform.TransformVector(new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")) * force / Time.deltaTime),
+                point
+            );
         }
 
         RaycastHit rh;
