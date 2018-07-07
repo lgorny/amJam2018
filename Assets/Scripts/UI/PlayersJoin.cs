@@ -26,6 +26,7 @@ public class PlayersJoin : MonoBehaviour
 
     public void StartGame()
     {
+        SessionManager.SetupPlayers();
         SessionManager.InitNextRound();
         GetComponent<Canvas>().enabled = false;
     }

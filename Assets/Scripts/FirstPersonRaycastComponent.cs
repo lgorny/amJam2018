@@ -33,9 +33,9 @@ public class FirstPersonRaycastComponent : MonoBehaviour
         {
             HUD.DisplayOverInteractable(holdedItem.gameObject);
             holdedItem.AddForceAtPosition(
-                            transform.TransformVector(new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")) * force / Time.deltaTime),
-                            point
-                            );
+                transform.TransformVector(new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")) * force / Time.deltaTime),
+                point
+            );
         }
 
         RaycastHit rh;
@@ -61,7 +61,7 @@ public class FirstPersonRaycastComponent : MonoBehaviour
                     if (Input.GetAxisRaw(HOLD) != 0 || Input.GetButton(TAKE_OR_INTERACT_BUTTON))
                     {
                         FirstPersonController.HoldingThing = true;
-                        point = rh.transform.TransformPoint(rh.point);
+                        point = rh.transform.InverseTransformPoint(rh.point);
                     }
                     break;
                 default:

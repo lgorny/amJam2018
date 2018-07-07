@@ -51,6 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b213a35e246874bb3e68e85d8c8b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Items:
+  - {fileID: 11400000, guid: 5147e568870a0bb468fe495dd4ae9ed8, type: 2}
   FoodPreferenceTypes:
   - {fileID: 11400000, guid: 552574edd15f51a419b25086a018cbcf, type: 2}
   - {fileID: 11400000, guid: 7c9dae82daa60484f82e3275f5333f66, type: 2}
@@ -58,4 +60,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cbbe2485decc79d4cbd3632bb9761d60, type: 2}
   - {fileID: 11400000, guid: d2203ff6486ea424aaaf3cc7a8ee77ed, type: 2}
   PlayerController: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+  PlayerControllerInstance: {fileID: 0}
   TestItem: {fileID: 11400000, guid: 5147e568870a0bb468fe495dd4ae9ed8, type: 2}
