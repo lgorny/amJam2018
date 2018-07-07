@@ -26,6 +26,8 @@ public class PlayerSessionManager : MonoBehaviour
     public GameObject PlayerController;
     public GameObject PlayerControllerInstance;
 
+    public PlayerStart PlayerStartUI;
+
     private int CurrentPlayerIndex;
 
     void Start()
@@ -46,7 +48,7 @@ public class PlayerSessionManager : MonoBehaviour
         PlayerControllerInstance = Instantiate(PlayerController, Vector3.zero, Quaternion.identity);
         PlayerControllerInstance.GetComponentInChildren<FirstPersonRaycastComponent>().CurrentPlayer = CurrentPlayer;
 
-        StartCoroutine(StartRoundCounter());
+        //StartCoroutine(StartRoundCounter());
     }
 
     public void SetupPlayers()
@@ -75,7 +77,6 @@ public class PlayerSessionManager : MonoBehaviour
         {
             CurrentPlayer = Players[CurrentPlayerIndex];
 
-            var PlayerStartUI = FindObjectOfType<PlayerStart>();
             PlayerStartUI.UpdateContent();
             PlayerStartUI.GetComponent<Canvas>().enabled = true;
         }
