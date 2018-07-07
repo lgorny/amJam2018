@@ -57,3 +57,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e3308e074d1973145adfc5f49455323e, type: 2}
   - {fileID: 11400000, guid: cbbe2485decc79d4cbd3632bb9761d60, type: 2}
   - {fileID: 11400000, guid: d2203ff6486ea424aaaf3cc7a8ee77ed, type: 2}
+  PlayerController: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+  TestItem: {fileID: 11400000, guid: 5147e568870a0bb468fe495dd4ae9ed8, type: 2}
