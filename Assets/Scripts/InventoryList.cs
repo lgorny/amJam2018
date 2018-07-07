@@ -40,6 +40,14 @@ public class InventoryList : MonoBehaviour
             it.transform.localScale = new Vector3(500f, 500f, 500f);
             it.layer = 12;
 
+            var c = it.GetComponentsInChildren<Transform>();
+
+            for (var j = 0; j < c.Length; j++)
+            {
+
+                c[j].gameObject.layer = 12;
+            }
+
             if (i % 2 == 1)
                 currY += 1;
         }
