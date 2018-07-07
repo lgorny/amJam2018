@@ -31,6 +31,7 @@ GameObject:
   - component: {fileID: 8100000}
   - component: {fileID: 12474086}
   - component: {fileID: 114701670470304546}
+  - component: {fileID: 114458665243415616}
   m_Layer: 9
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -494,6 +495,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114458665243415616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 793a47f3627a68f408836be2400533f9, type: 2}
 --- !u!114 &114577674164571388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -532,6 +545,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba1cc6133b52d94f88e80ea5ac3ab28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentPlayer:
+    PlayerID: 
+    PlayerInventory:
+      Items: []
+    PreferenceType: {fileID: 0}
   interactibleLayers:
     serializedVersion: 2
     m_Bits: 4294966783
