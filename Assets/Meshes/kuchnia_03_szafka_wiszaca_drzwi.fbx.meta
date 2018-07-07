@@ -17,7 +17,22 @@ ModelImporter:
     4300000: Mesh
     7400000: Take 001
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: d30e4c3384bde2947b10014d428cf7a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: e79fb3ef3b6a54c46be43d20e30663f4, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood
+    second: {fileID: 2100000, guid: fd1fec3a08aab4b42bef4d6c3267d86e, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
