@@ -24,6 +24,12 @@ public class PlayersJoin : MonoBehaviour
         UpdateFoodPreferenceDropdown();
     }
 
+    public void StartGame()
+    {
+        SessionManager.InitNextRound();
+        GetComponent<Canvas>().enabled = false;
+    }
+
     public void UpdateFoodPreferenceDropdown()
     {
         FoodPreferenceDropdown.options = new List<Dropdown.OptionData>();
