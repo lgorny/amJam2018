@@ -16,13 +16,18 @@ public class FirstPersonRaycastComponent : MonoBehaviour
     Rigidbody holdedItem;
     Vector3 point;
 
-    void FixedUpdate()
+    private void Update()
     {
         if (Input.GetButtonDown("Fire2"))
         {
             CurrentPlayer.PlayerInventory.SpawnSelected(transform.position + transform.forward);
+            return;
         }
+    }
 
+    void FixedUpdate()
+    {
+        
         if ((Input.GetAxisRaw(HOLD) == 0 && Input.GetButton(TAKE_OR_INTERACT_BUTTON) == false) || (holdedItem != null && Vector3.Distance(this.transform.position, holdedItem.position) > interactibleDistance * 1.8f))
         {
             FirstPersonController.HoldingThing = false;
