@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 95889941796361436}
   - component: {fileID: 114402178915567926}
   - component: {fileID: 54304661303523814}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: item_08_salata
   m_TagString: Untagged
   m_Icon: {fileID: 0}
