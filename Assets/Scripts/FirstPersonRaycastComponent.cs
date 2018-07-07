@@ -11,7 +11,11 @@ public class FirstPersonRaycastComponent : MonoBehaviour
 
     void FixedUpdate()
     {
-        FirstPersonController.HoldingThing = false;
+        if(!Input.GetButton(TAKE_OR_INTERACT_BUTTON))
+        {
+            FirstPersonController.HoldingThing = false;
+        }
+
         RaycastHit rh;
         Ray r = new Ray(this.transform.position, this.transform.forward);
         if (Physics.Raycast(r, out rh, interactibleDistance, interactibleLayers))
@@ -28,7 +32,10 @@ public class FirstPersonRaycastComponent : MonoBehaviour
                     if (Input.GetButton(TAKE_OR_INTERACT_BUTTON))
                     {
                         FirstPersonController.HoldingThing = true;
-                        rh.collider.gameObject.GetComponent<Rigidbody>().AddForce(transform.TransformVector(new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * force / Time.deltaTime));
+                        rh.collider.gameObject.GetComponent<Rigidbody>().AddForceAtPosition(
+                            transform.TransformVector(new Vector3(-Input.GetAxis("Vertical"), Input.GetAxis("Horizontal")) * force / Time.deltaTime),
+                            rh.transform.InverseTransformPoint(rh.point)
+                            );
                     }
                     break;
             }
