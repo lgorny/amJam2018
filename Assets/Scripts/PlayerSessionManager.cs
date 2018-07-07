@@ -12,8 +12,11 @@ public class PlayerSessionManager : MonoBehaviour
     }
 
     [SerializeField]
+    private List<InventoryItem> Items;
+
+    [SerializeField]
     private List<FoodPreferenceType> FoodPreferenceTypes;
-    private int RoundTime = 5;
+    private int RoundTime = 15;
     public List<FoodPreferenceType> AvaiableFoodPreferenceTypes { get; private set; }
 
     public SessionPlayer CurrentPlayer { get; private set; }
@@ -21,8 +24,7 @@ public class PlayerSessionManager : MonoBehaviour
     public List<SessionPlayer> Players { get; private set; }
 
     public GameObject PlayerController;
-
-    public InventoryItem TestItem;
+    public GameObject PlayerControllerInstance;
 
     private int CurrentPlayerIndex;
 
@@ -36,16 +38,31 @@ public class PlayerSessionManager : MonoBehaviour
         AvaiableFoodPreferenceTypes.Remove(PreferenceType);
 
         var Player = new SessionPlayer(PlayerID, PreferenceType);
-        Player.PlayerInventory.AddItem(TestItem);
         Players.Add(Player);
     }
 
     public void StartRound()
     {
-        var Player = Instantiate(PlayerController, Vector3.zero, Quaternion.identity);
-        Player.GetComponentInChildren<FirstPersonRaycastComponent>().CurrentPlayer = CurrentPlayer;
+        PlayerControllerInstance = Instantiate(PlayerController, Vector3.zero, Quaternion.identity);
+        PlayerControllerInstance.GetComponentInChildren<FirstPersonRaycastComponent>().CurrentPlayer = CurrentPlayer;
 
-        //StartCoroutine(StartRoundCounter());
+        StartCoroutine(StartRoundCounter());
+    }
+
+    public void SetupPlayers()
+    {
+        for (int i = 0; i < Players.Count; i++)
+        {
+            var p = Players[i];
+
+            for (int j = 0; j < Players.Count; j++)
+            {
+                if (p != Players[j])
+                {
+                    p.PlayerInventory.AddItem(Instantiate(GetRandomItemByFoodPreference(Players[j].PreferenceType)));
+                }
+            }
+        }
     }
 
     public void InitNextRound()
@@ -82,6 +99,8 @@ public class PlayerSessionManager : MonoBehaviour
 
     public void SessionEnded()
     {
+        Destroy(PlayerControllerInstance);
+
         Debug.Log("Session Ended");
         InitNextRound();
     }
@@ -95,5 +114,19 @@ public class PlayerSessionManager : MonoBehaviour
         }
 
         SessionEnded();
+    }
+
+    public InventoryItem GetRandomItemByFoodPreference(FoodPreferenceType Preference)
+    {
+        List<InventoryItem> AcceptableItems = new List<InventoryItem>();
+        for (int i = 0; i < Items.Count; i++)
+        {
+            if (Items[i].CanIEatThat(Preference))
+            {
+                AcceptableItems.Add(Items[i]);
+            }
+        }
+
+        return AcceptableItems[Random.Range(0, AcceptableItems.Count - 1)];
     }
 }
