@@ -59,7 +59,9 @@ public class PlayerSessionManager : MonoBehaviour
             {
                 if (p != Players[j])
                 {
-                    p.PlayerInventory.AddItem(Instantiate(GetRandomItemByFoodPreference(Players[j].PreferenceType)));
+                    var item = Instantiate(GetRandomItemByFoodPreference(Players[j].PreferenceType));
+                    item.Owner = p;
+                    p.PlayerInventory.AddItem(item);
                 }
             }
         }
