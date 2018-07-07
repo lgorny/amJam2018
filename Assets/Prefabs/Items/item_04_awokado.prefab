@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23605884665097826}
   - component: {fileID: 54442491583755340}
   - component: {fileID: 114212771863038982}
+  - component: {fileID: 64290095853461834}
   m_Layer: 10
   m_Name: item_04_awokado
   m_TagString: Untagged
@@ -100,6 +101,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64290095853461834
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925857619176856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: cc6e6f43c905c9547b617559c1befb91, type: 3}
 --- !u!114 &114212771863038982
 MonoBehaviour:
   m_ObjectHideFlags: 1

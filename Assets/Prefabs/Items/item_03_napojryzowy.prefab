@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 95355802966683284}
   - component: {fileID: 54766531915884278}
   - component: {fileID: 114400233510279108}
+  - component: {fileID: 64859266061195864}
   m_Layer: 10
   m_Name: item_03_napojryzowy
   m_TagString: Untagged
@@ -101,6 +102,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64859266061195864
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854882722502744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 3b2ea573226028245bdca62cbac8aeda, type: 3}
 --- !u!95 &95355802966683284
 Animator:
   serializedVersion: 3
