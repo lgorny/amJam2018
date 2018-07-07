@@ -6,6 +6,7 @@ public class FirstPersonRaycastComponent : MonoBehaviour
     const string TAKE_OR_INTERACT_BUTTON = "Fire1";
     const string HOLD = "Hold";
     public SessionPlayer CurrentPlayer;
+    int lastFrameTaw = 0;
 
     [SerializeField] LayerMask interactibleLayers;
     [SerializeField] float interactibleDistance;
@@ -72,11 +73,13 @@ public class FirstPersonRaycastComponent : MonoBehaviour
                 case "Interactable":
                     holdedItem = rh.collider.gameObject.GetComponent<Rigidbody>();
                     HUD.DisplayOverInteractable(rh.collider.gameObject);
-                    if (Input.GetAxisRaw(HOLD) != 0 || Input.GetButton(TAKE_OR_INTERACT_BUTTON))
+                    if (lastFrameTaw  == 0 && Input.GetAxisRaw(HOLD) != 0 || Input.GetButtonDown(TAKE_OR_INTERACT_BUTTON))
                     {
                         FirstPersonController.HoldingThing = true;
                         point = rh.transform.InverseTransformPoint(rh.point);
                     }
+
+                    lastFrameTaw = Mathf.RoundToInt(Input.GetAxisRaw(HOLD));
                     break;
                 default:
                     if (!FirstPersonController.HoldingThing)
