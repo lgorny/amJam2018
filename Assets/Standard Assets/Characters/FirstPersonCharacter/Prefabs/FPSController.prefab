@@ -704,6 +704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224577230428212992}
   - component: {fileID: 222459380816108574}
+  - component: {fileID: 114558742832974320}
   - component: {fileID: 114284309872482002}
   m_Layer: 12
   m_Name: Timer
