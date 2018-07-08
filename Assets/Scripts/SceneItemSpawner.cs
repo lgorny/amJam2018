@@ -6,7 +6,8 @@ public class SceneItemSpawner : MonoBehaviour
 {
     public void Spawn(InventoryItem ItemDescription)
     {
-        ItemDescription.Spawn(transform.position);
+        var g = Instantiate(ItemDescription).Spawn(transform.position);
+        g.GetComponent<SceneItem>().ItemDescription.Owner = null;
         Destroy(gameObject);
     }
 

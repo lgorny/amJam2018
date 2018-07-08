@@ -29,9 +29,10 @@ public class FirstPersonRaycastComponent : MonoBehaviour
                 {
                     rb.AddForce(this.transform.forward * 2000f);
                 }
+                transform.parent.gameObject.GetComponentInChildren<PoinChangeUI>().PointChange(1);
             }
 
-            transform.parent.gameObject.GetComponentInChildren<PoinChangeUI>().PointChange(1);
+            
 
             return;
         }
