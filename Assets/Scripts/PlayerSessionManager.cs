@@ -48,9 +48,17 @@ public class PlayerSessionManager : MonoBehaviour
     private int CurrentPlayerIndex;
     private int CurrentRound = 0;
 
+    public AudioClip rndStart;
+    public AudioClip gong;
+    AudioSource cachedSource;
+
+    bool playingTimer = false;
+
     void Start()
     {
         ResetSessions();
+        cachedSource = GetComponent<AudioSource>();
+
     }
 
     public void AddPlayer(string PlayerID, FoodPreferenceType PreferenceType)
@@ -64,7 +72,8 @@ public class PlayerSessionManager : MonoBehaviour
     public void StartRound()
     {
         canvas.SetActive(false);
-
+        this.cachedSource.PlayOneShot(rndStart);
+        playingTimer = false;
         PlayerControllerInstance = Instantiate(PlayerController, PlayerStart.transform.position, PlayerStart.transform.localRotation);
         PlayerControllerInstance.GetComponentInChildren<FirstPersonRaycastComponent>().CurrentPlayer = CurrentPlayer;
 
@@ -140,7 +149,8 @@ public class PlayerSessionManager : MonoBehaviour
     public void SessionEnded()
     {
         Destroy(PlayerControllerInstance);
-
+        this.cachedSource.Stop();
+        this.cachedSource.PlayOneShot(gong);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
@@ -153,6 +163,11 @@ public class PlayerSessionManager : MonoBehaviour
         for (int i = RoundTime; i >= 0 ; i--)
         {
             Timeleft = i;
+            if(playingTimer == false && i <= 10)
+            {
+                playingTimer = true;
+                this.cachedSource.Play();
+            }
             yield return new WaitForSeconds(1f);
         }
 

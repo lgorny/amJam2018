@@ -42,7 +42,7 @@ MonoBehaviour:
   ambientOcclusion:
     m_Enabled: 1
     m_Settings:
-      intensity: 1
+      intensity: 1.08
       radius: 0.3
       sampleCount: 10
       downsampling: 1
@@ -71,13 +71,13 @@ MonoBehaviour:
   depthOfField:
     m_Enabled: 0
     m_Settings:
-      focusDistance: 0.33
-      aperture: 5.6
+      focusDistance: 0.5
+      aperture: 6.9
       focalLength: 46
       useCameraFov: 1
       kernelSize: 3
   motionBlur:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       shutterAngle: 270
       sampleCount: 10
@@ -322,9 +322,9 @@ MonoBehaviour:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.428
-      smoothness: 0.161
-      roundness: 1
+      intensity: 0.572
+      smoothness: 0.709
+      roundness: 0.343
       mask: {fileID: 0}
       opacity: 1
       rounded: 0
