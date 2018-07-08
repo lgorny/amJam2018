@@ -124,7 +124,9 @@ public class PlayerSessionManager : MonoBehaviour
         {
             CurrentRound += 1;
 
-            if (CurrentRound > RoundNumber)
+            Debug.Log("CurrentRound: " + CurrentRound);
+
+            if (CurrentRound >= RoundNumber)
             {
                 canvas.SetActive(true);
                 ScoreUIObject.GetComponent<Canvas>().enabled = true;
