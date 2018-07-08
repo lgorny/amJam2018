@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: "Wszystko\u017Cerny"
   m_EditorClassIdentifier: 
   DisplayName: "Wszystko\u017Cerny"
+  ItemsList: {fileID: 1705762442714536, guid: 04ed6fdc1dc4b2c469d73d4a8e28e6c1, type: 2}

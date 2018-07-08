@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4171038537404708}
   - component: {fileID: 33234280830562648}
   - component: {fileID: 23455663914086528}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: item_09_stek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 95609838118131100}
   - component: {fileID: 23206777606386502}
   - component: {fileID: 33241474312214398}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: item_02_banan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 33107684958414796}
   - component: {fileID: 23709054674382260}
   - component: {fileID: 95935938277280792}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: item_01_jajko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4577653215282982}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Celiaklia
   m_TagString: Untagged
   m_Icon: {fileID: 0}

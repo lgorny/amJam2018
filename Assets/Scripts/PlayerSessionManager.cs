@@ -20,7 +20,7 @@ public class PlayerSessionManager : MonoBehaviour
     [SerializeField]
     private int RoundTime = 30;
     [SerializeField]
-    private int RoundNumber = 30;
+    private int RoundNumber = 2;
     [SerializeField]
     private int PlayersNumber = 5;
     [SerializeField]
@@ -46,6 +46,7 @@ public class PlayerSessionManager : MonoBehaviour
     public int Timeleft;
 
     private int CurrentPlayerIndex;
+    private int CurrentRound = 0;
 
     void Start()
     {
@@ -66,6 +67,8 @@ public class PlayerSessionManager : MonoBehaviour
 
         PlayerControllerInstance = Instantiate(PlayerController, PlayerStart.transform.position, PlayerStart.transform.localRotation);
         PlayerControllerInstance.GetComponentInChildren<FirstPersonRaycastComponent>().CurrentPlayer = CurrentPlayer;
+
+        PlayerControllerInstance.GetComponentInChildren<HUD>().UpdateList();
 
         StartCoroutine(StartRoundCounter());
     }
@@ -89,6 +92,17 @@ public class PlayerSessionManager : MonoBehaviour
     {
         CurrentPlayerIndex += 1;
 
+        if ((FindObjectsOfType<SceneItem>().Length > 0 && CurrentRound > 0) || !PlayersGotItemsToHide())
+        {
+            // NO MORE BJECTS
+            Debug.LogWarning("NO MORE OBJECTS");
+            canvas.SetActive(true);
+            ScoreUIObject.GetComponent<Canvas>().enabled = true;
+            ScoreUIObject.enabled = true;
+
+            return;
+        }
+
         if (CurrentPlayerIndex < Players.Count)
         {
             CurrentPlayer = Players[CurrentPlayerIndex];
@@ -96,19 +110,22 @@ public class PlayerSessionManager : MonoBehaviour
             canvas.SetActive(true);
             PlayerStartUI.UpdateContent();
             PlayerStartUI.GetComponent<Canvas>().enabled = true;
-        }
-        else if(CurrentSessionType == SessionRound.Hide)
-        {
-            CurrentSessionType = SessionRound.Seek;
-            CurrentPlayerIndex = -1;
-
-            InitNextRound();
-        }
+        }        
         else
         {
-            canvas.SetActive(true);
-            ScoreUIObject.GetComponent<Canvas>().enabled = true;
-            ScoreUIObject.enabled = true;
+            CurrentRound += 1;
+
+            if (CurrentRound > RoundNumber)
+            {
+                canvas.SetActive(true);
+                ScoreUIObject.GetComponent<Canvas>().enabled = true;
+                ScoreUIObject.enabled = true;
+            }
+            else
+            {
+                CurrentPlayerIndex = -1;
+                InitNextRound();
+            }
         }
     }
 
@@ -117,6 +134,7 @@ public class PlayerSessionManager : MonoBehaviour
         Players = new List<SessionPlayer>();
         AvaiableFoodPreferenceTypes = new List<FoodPreferenceType>(FoodPreferenceTypes);
         CurrentPlayerIndex = -1;
+        CurrentRound = 0;
     }
 
     public void SessionEnded()
@@ -136,7 +154,6 @@ public class PlayerSessionManager : MonoBehaviour
         {
             Timeleft = i;
             yield return new WaitForSeconds(1f);
-            Debug.Log(i);
         }
 
         SessionEnded();
@@ -168,5 +185,16 @@ public class PlayerSessionManager : MonoBehaviour
         }
 
         return AcceptableItems[Random.Range(0, AcceptableItems.Count - 1)];
+    }
+
+    public bool PlayersGotItemsToHide()
+    {
+        for (int i = 0; i < Players.Count; i++)
+        {
+            if (Players[i].PlayerHideInventory.Items.Count > 0)
+                return true;
+        }
+
+        return false;
     }
 }

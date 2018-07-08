@@ -6,4 +6,5 @@ using UnityEngine;
 public class FoodPreferenceType : ScriptableObject
 {
     public string DisplayName;
+    public GameObject ItemsList;
 }

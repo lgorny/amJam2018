@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: Wegetarianin
   m_EditorClassIdentifier: 
   DisplayName: Wegetarianin
+  ItemsList: {fileID: 1825882345701546, guid: 792c9cb447a72174585b685a4f3a5f94, type: 2}

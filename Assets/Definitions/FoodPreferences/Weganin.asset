@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: Weganin
   m_EditorClassIdentifier: 
   DisplayName: Weganin
+  ItemsList: {fileID: 1506620806868372, guid: d2659f2189df2694d8db081a8e77ddd4, type: 2}
