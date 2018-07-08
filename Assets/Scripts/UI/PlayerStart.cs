@@ -16,7 +16,7 @@ public class PlayerStart : MonoBehaviour
 
     public void UpdateContent()
     {
-        PlayerName.text = SessionManager.CurrentPlayer.PlayerID + " (" + SessionManager.CurrentSessionType.ToString() + ")";
+        PlayerName.text = "<b>" + SessionManager.CurrentPlayer.PlayerID + "</b> przygotuj się!";
     }
 
     public void StartGame()
