@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 82213896793608882}
   - component: {fileID: 65253642554313204}
   - component: {fileID: 59798560526731348}
-  - component: {fileID: 114886435290723120}
+  - component: {fileID: 114919755593454826}
   m_Layer: 11
   m_Name: kuchnia_03_szafka_wiszaca_drzwi_mirror
   m_TagString: Untagged
@@ -110,8 +110,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1713214110599812}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1645615, y: 0.5, z: -3.4083006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.56, y: 0.55, z: -0.9833126}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4179401819622808}
@@ -509,7 +509,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114886435290723120
+--- !u!114 &114919755593454826
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -517,10 +517,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1228345353597676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e17fa4853c1bc40479d85c055d64acf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 172a7972e9ed3f449a4566c4377a51d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clips: []
-  AlsoScrape: 0
-  AlsoOnSlow: 0
-  AlsoOnAngularSlow: 1
+  specialSource: {fileID: 0}
+  clipsOpen:
+  - {fileID: 8300000, guid: 0cf4735e02b9add4ca1d62063f26f82d, type: 3}
+  clipsClose:
+  - {fileID: 8300000, guid: 1a57f6516cc371f4cb8c1661b437c0b4, type: 3}
+  prevFrameYRotation: 0
+  closedRotation: 0
