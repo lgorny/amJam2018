@@ -30,6 +30,9 @@ public class FirstPersonRaycastComponent : MonoBehaviour
                     rb.AddForce(this.transform.forward * 2000f);
                 }
             }
+
+            transform.parent.gameObject.GetComponentInChildren<PoinChangeUI>().PointChange(1);
+
             return;
         }
     }
@@ -63,10 +66,17 @@ public class FirstPersonRaycastComponent : MonoBehaviour
                     HUD.DisplayOverItem(hitItem);
                     if (Input.GetButtonDown(TAKE_OR_INTERACT_BUTTON))
                     {
-                        if(hitItem.ItemDescription.Owner == CurrentPlayer)                        
+                        if (hitItem.ItemDescription.Owner == CurrentPlayer)
+                        {
                             CurrentPlayer.PlayerHideInventory.AddItem(hitItem.ItemDescription);
+                            transform.parent.gameObject.GetComponentInChildren<PoinChangeUI>().PointChange(-1);
+                        }
                         else
+                        {
+                            var p1 = CurrentPlayer.GetPoints();
                             CurrentPlayer.PlayerInventory.AddItem(hitItem.ItemDescription);
+                            transform.parent.gameObject.GetComponentInChildren<PoinChangeUI>().PointChange(CurrentPlayer.GetPoints() - p1);
+                        }
 
                         hitItem.Collect();                        
                     }

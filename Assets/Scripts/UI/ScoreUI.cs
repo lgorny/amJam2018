@@ -38,6 +38,7 @@ public class ScoreUI : MonoBehaviour
 
     public void GoToLobby()
     {
+        Debug.Log("GoToLobby");
         Application.LoadLevel(Application.loadedLevel);
     }
 }
