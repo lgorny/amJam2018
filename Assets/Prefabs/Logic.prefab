@@ -1720,7 +1720,7 @@ MonoBehaviour:
   JoinButton: {fileID: 114614629274314246}
   CheckB: {fileID: 114617076920135160}
   MinumumNumOfPlayers: 2
-  MaximumNumOfPlayers: 5
+  MaximumNumOfPlayers: 3
 --- !u!114 &114273750944077540
 MonoBehaviour:
   m_ObjectHideFlags: 1
