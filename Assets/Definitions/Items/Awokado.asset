@@ -15,12 +15,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fd334687ad9fae941b32b9ad5cc1c92f, type: 2}
   AcceptablePreferences:
   - {fileID: 11400000, guid: 552574edd15f51a419b25086a018cbcf, type: 2}
-  - {fileID: 11400000, guid: 7c9dae82daa60484f82e3275f5333f66, type: 2}
+  - {fileID: 11400000, guid: e3308e074d1973145adfc5f49455323e, type: 2}
   Points: 1
   Prefab: {fileID: 1925857619176856, guid: 9ae53b75cf56cb643a439c0316a3b810, type: 2}
   InventoryScale: {x: 400, y: 400, z: 400}
   Owner:
     PlayerID: 
     PlayerInventory:
+      Items: []
+    PlayerHideInventory:
       Items: []
     PreferenceType: {fileID: 0}

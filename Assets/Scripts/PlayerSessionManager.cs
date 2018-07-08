@@ -92,7 +92,7 @@ public class PlayerSessionManager : MonoBehaviour
     {
         CurrentPlayerIndex += 1;
 
-        if ((FindObjectsOfType<SceneItem>().Length > 0 && CurrentRound > 0) || !PlayersGotItemsToHide())
+        if ((FindObjectsOfType<SceneItem>().Length <= 0 && CurrentRound > 0) && !PlayersGotItemsToHide())
         {
             // NO MORE BJECTS
             Debug.LogWarning("NO MORE OBJECTS");
