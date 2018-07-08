@@ -15,6 +15,8 @@ public class SoundOnColision : MonoBehaviour
     [SerializeField] bool AlsoOnSlow = false;
     [SerializeField] bool AlsoOnAngularSlow = false;
 
+    bool locked = true;
+
     private void Awake()
     {
         CachedAudioSource = GetComponent<AudioSource>();
@@ -23,27 +25,26 @@ public class SoundOnColision : MonoBehaviour
 
     private IEnumerator Start()
     {
-
-
-        this.CachedAudioSource.volume = 0f;
-        yield return new WaitForSeconds(.7f);
-        this.CachedAudioSource.volume = 1f;
+        locked = true;
+        yield return new WaitForSeconds(1.6f);
+        locked = false;
 
         if (clips == null || clips.Length == 0)
         {
             clips = new AudioClip[1] { this.CachedAudioSource.clip };
-
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(clips.Length > 0)
+        if (locked) return;
+        if (clips.Length > 0)
             CachedAudioSource.PlayOneShot(clips[Random.Range(0, clips.Length)], collision.relativeVelocity.magnitude);
     }
 
     private void FixedUpdate()
     {
+        if (locked) return;
         if (clips.Length == 0) return;
         if (!CachedRigidbody) return;
 
@@ -63,7 +64,8 @@ public class SoundOnColision : MonoBehaviour
 
     private void Update()
     {
-        if(CachedRigidbody == null)
+        if (locked) return;
+        if (CachedRigidbody == null)
         {
             Object.Destroy(this);
         }
