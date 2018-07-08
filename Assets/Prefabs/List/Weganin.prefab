@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4414242045072554}
   - component: {fileID: 33143506092046378}
   - component: {fileID: 23933661458658912}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: item_04_awokado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4540650654671668}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Weganin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 95332053450944052}
   - component: {fileID: 23824380023886202}
   - component: {fileID: 33391329976414840}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: item_02_banan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 33592145193334358}
   - component: {fileID: 23277453528291896}
   - component: {fileID: 95738569616090032}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: item_03_napojryzowy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

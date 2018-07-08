@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: Celiaklia
   m_EditorClassIdentifier: 
   DisplayName: Celiaklia
+  ItemsList: {fileID: 1655085891443310, guid: 0ea1d05d36c9bcc4d9a145b566147293, type: 2}

@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: NietolerancjaLaktozy
   m_EditorClassIdentifier: 
   DisplayName: Nietolerancja Laktozy
+  ItemsList: {fileID: 1279831282707508, guid: 0c4bf35327d53694d8723973d9836af4, type: 2}

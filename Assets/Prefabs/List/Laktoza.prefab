@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33304206958373508}
   - component: {fileID: 23452386493200646}
   - component: {fileID: 95775393467370094}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: item_03_napojryzowy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4206894395005442}
   - component: {fileID: 33343695144492464}
   - component: {fileID: 23323398878583288}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: item_09_stek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4641194180839794}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Laktoza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4453159927548316}
   - component: {fileID: 95498325005973964}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: item_06_parowka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4762057979247008}
   - component: {fileID: 33434896237899444}
   - component: {fileID: 23150851286896660}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
