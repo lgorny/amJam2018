@@ -11,6 +11,9 @@ public class FirstPersonRaycastComponent : MonoBehaviour
     [SerializeField] LayerMask interactibleLayers;
     [SerializeField] float interactibleDistance;
     [SerializeField] float force;
+    [SerializeField] AudioSource asrc;
+    [SerializeField] AudioClip collect_good;
+    [SerializeField] AudioClip collect_bad;
 
     [SerializeField] HUDController HUD;
 
@@ -21,7 +24,7 @@ public class FirstPersonRaycastComponent : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire2"))
         {
-            var g = CurrentPlayer.PlayerHideInventory.SpawnSelected(transform.position + transform.forward);
+            var g = CurrentPlayer.PlayerHideInventory.SpawnSelected(transform.position + (transform.forward * .1f));
             if (g)
             {
                 var rb = g.GetComponent<Rigidbody>();
@@ -29,9 +32,10 @@ public class FirstPersonRaycastComponent : MonoBehaviour
                 {
                     rb.AddForce(this.transform.forward * 2000f);
                 }
+                transform.parent.gameObject.GetComponentInChildren<PoinChangeUI>().PointChange(1);
             }
 
-            transform.parent.gameObject.GetComponentInChildren<PoinChangeUI>().PointChange(1);
+            
 
             return;
         }
@@ -70,12 +74,14 @@ public class FirstPersonRaycastComponent : MonoBehaviour
                         {
                             CurrentPlayer.PlayerHideInventory.AddItem(hitItem.ItemDescription);
                             transform.parent.gameObject.GetComponentInChildren<PoinChangeUI>().PointChange(-1);
+                            asrc.PlayOneShot(collect_bad);
                         }
                         else
                         {
                             var p1 = CurrentPlayer.GetPoints();
                             CurrentPlayer.PlayerInventory.AddItem(hitItem.ItemDescription);
                             transform.parent.gameObject.GetComponentInChildren<PoinChangeUI>().PointChange(CurrentPlayer.GetPoints() - p1);
+                            asrc.PlayOneShot(collect_good);
                         }
 
                         hitItem.Collect();                        

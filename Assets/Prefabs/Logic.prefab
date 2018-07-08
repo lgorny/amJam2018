@@ -1142,10 +1142,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7d2aee5e69b9ed3419a6dead30a5cc75, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2601,8 +2601,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e3308e074d1973145adfc5f49455323e, type: 2}
   - {fileID: 11400000, guid: 7c9dae82daa60484f82e3275f5333f66, type: 2}
   - {fileID: 11400000, guid: 552574edd15f51a419b25086a018cbcf, type: 2}
-  RoundTime: 45
-  RoundNumber: 3
+  RoundTime: 30
+  RoundNumber: 2
   PlayersNumber: 3
   NumberOfItemsToHide: 3
   PlayerController: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
