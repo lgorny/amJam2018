@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657993, g: 0.49641472, b: 0.5748154, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657975, g: 0.4964143, b: 0.57481444, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3327,7 +3327,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4429533956523570, guid: a4637e1183d168449b486b555e82f231, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4429533956523570, guid: a4637e1183d168449b486b555e82f231, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -4169,74 +4169,6 @@ Prefab:
       propertyPath: PlayerStart
       value: 
       objectReference: {fileID: 1751464689}
-    - target: {fileID: 114682562852793222, guid: 8c83d448d15d0ed449899493a2ecf7fe,
-        type: 2}
-      propertyPath: m_RaycastTarget
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114682562852793222, guid: 8c83d448d15d0ed449899493a2ecf7fe,
-        type: 2}
-      propertyPath: m_FillCenter
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114682562852793222, guid: 8c83d448d15d0ed449899493a2ecf7fe,
-        type: 2}
-      propertyPath: m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1965879460940896, guid: 8c83d448d15d0ed449899493a2ecf7fe, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114923222079973992, guid: 8c83d448d15d0ed449899493a2ecf7fe,
-        type: 2}
-      propertyPath: m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114365640925028668, guid: 8c83d448d15d0ed449899493a2ecf7fe,
-        type: 2}
-      propertyPath: m_SpriteState.m_PressedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 592d26ae65376544f9e2a502259bc808,
-        type: 3}
-    - target: {fileID: 114614629274314246, guid: 8c83d448d15d0ed449899493a2ecf7fe,
-        type: 2}
-      propertyPath: m_SpriteState.m_PressedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 592d26ae65376544f9e2a502259bc808,
-        type: 3}
-    - target: {fileID: 114921002151543882, guid: 8c83d448d15d0ed449899493a2ecf7fe,
-        type: 2}
-      propertyPath: m_SpriteState.m_PressedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 592d26ae65376544f9e2a502259bc808,
-        type: 3}
-    - target: {fileID: 114160620778716950, guid: 8c83d448d15d0ed449899493a2ecf7fe,
-        type: 2}
-      propertyPath: m_SpriteState.m_PressedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 592d26ae65376544f9e2a502259bc808,
-        type: 3}
-    - target: {fileID: 114373967823892854, guid: 8c83d448d15d0ed449899493a2ecf7fe,
-        type: 2}
-      propertyPath: m_FillCenter
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114729993276396986, guid: 8c83d448d15d0ed449899493a2ecf7fe,
-        type: 2}
-      propertyPath: m_FillCenter
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114312820820704290, guid: 8c83d448d15d0ed449899493a2ecf7fe,
-        type: 2}
-      propertyPath: m_FillCenter
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114923222079973992, guid: 8c83d448d15d0ed449899493a2ecf7fe,
-        type: 2}
-      propertyPath: m_FillCenter
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c83d448d15d0ed449899493a2ecf7fe, type: 2}
   m_IsPrefabParent: 0
