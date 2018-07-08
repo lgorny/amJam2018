@@ -69,7 +69,7 @@ public class FirstPersonRaycastComponent : MonoBehaviour
                         if (hitItem.ItemDescription.Owner == CurrentPlayer)
                         {
                             CurrentPlayer.PlayerHideInventory.AddItem(hitItem.ItemDescription);
-                            transform.parent.gameObject.GetComponentInChildren<PoinChangeUI>().PointChange(1);
+                            transform.parent.gameObject.GetComponentInChildren<PoinChangeUI>().PointChange(-1);
                         }
                         else
                         {
