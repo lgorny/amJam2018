@@ -48,7 +48,11 @@ public class InventoryList : MonoBehaviour
             it.transform.localRotation = Quaternion.identity;
             it.layer = 12;
 
-            Destroy(it.GetComponent<Rigidbody>());
+            if(it.GetComponent<Rigidbody>())
+                Destroy(it.GetComponent<Rigidbody>());
+
+            if (it.GetComponent<SoundOnColision>())
+                Destroy(it.GetComponent<SoundOnColision>());
 
             var c = it.GetComponentsInChildren<Transform>();
 
