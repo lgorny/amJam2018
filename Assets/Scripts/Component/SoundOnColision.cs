@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(AudioSource), typeof(Rigidbody))]
+[RequireComponent(typeof(AudioSource))]
 public class SoundOnColision : MonoBehaviour
 {
     AudioSource CachedAudioSource { get; set; }
@@ -45,6 +45,7 @@ public class SoundOnColision : MonoBehaviour
     private void FixedUpdate()
     {
         if (clips.Length == 0) return;
+        if (!CachedRigidbody) return;
 
         if (AlsoOnAngularSlow && CachedRigidbody.angularVelocity.magnitude < .1f && angularVelocity.magnitude > .1f)
         {
@@ -62,7 +63,12 @@ public class SoundOnColision : MonoBehaviour
 
     private void Update()
     {
-        if (AlsoScrape)
+        if(CachedRigidbody == null)
+        {
+            Object.Destroy(this);
+        }
+
+        if (AlsoScrape && AudioMagica.Instance)
             AudioMagica.Instance.SetVol(Mathf.Min(1f, (this.CachedRigidbody.velocity.magnitude * .2f)) / Vector3.Distance(this.transform.position, Camera.main.transform.position));
     }
 }
