@@ -32,6 +32,7 @@ public class SessionPlayer
         {
             if (PlayerInventory.Items[i].CanIEatThat(PreferenceType))
             {
+                Debug.Log(PlayerInventory.Items[i].Owner);
                 if (PlayerInventory.Items[i].Owner == null)
                 {
                     Points += PlayerInventory.Items[i].Points * PointsNoOwner;
