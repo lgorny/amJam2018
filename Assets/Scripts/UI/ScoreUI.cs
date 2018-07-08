@@ -24,7 +24,7 @@ public class ScoreUI : MonoBehaviour
             Debug.Log(PlayerSorted[i].GetPoints());
 
             if(i == PlayerSorted.Count - 1)
-                PlayerName.text += "<color=" + '"'.ToString() + "#ff0000ff" + '"'.ToString() + ">" + PlayerSorted[i].PlayerID + ": " + PlayerSorted[i].GetPoints() + "</color>\n";
+                PlayerName.text += "<color=" + '"'.ToString() + "#339933" + '"'.ToString() + ">" + PlayerSorted[i].PlayerID + ": " + PlayerSorted[i].GetPoints() + "</color>\n";
             else
                 PlayerName.text += PlayerSorted[i].PlayerID + ": " + PlayerSorted[i].GetPoints() + "\n";
         }
@@ -35,4 +35,9 @@ public class ScoreUI : MonoBehaviour
     void Update () {
 		
 	}
+
+    public void GoToLobby()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
 }
