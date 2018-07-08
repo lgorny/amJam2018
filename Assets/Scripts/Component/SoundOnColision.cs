@@ -39,7 +39,7 @@ public class SoundOnColision : MonoBehaviour
     {
         if (locked) return;
         if (clips.Length > 0)
-            CachedAudioSource.PlayOneShot(clips[Random.Range(0, clips.Length)], collision.relativeVelocity.magnitude);
+            CachedAudioSource.PlayOneShot(clips[Random.Range(0, clips.Length)], collision.relativeVelocity.magnitude * .5f);
     }
 
     private void FixedUpdate()
