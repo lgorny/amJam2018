@@ -1583,8 +1583,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Zdobywasz punkty za zebranie odpowiedniego dla swojej preferencji jedzenia
-    i za ukrycie przedmiot\xF3w."
+  m_Text: "Zdobywasz punkty za <b>zebranie odpowiedniego</b> dla swojej preferencji
+    jedzenia i za <b>ukrycie</b> przedmiot\xF3w."
 --- !u!114 &114235046315466782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1668,8 +1668,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "<b>Ukryj</b> jedzenie omy\u0142kowo przypisane Tobie, znajd\u017A co\u015B,
-    co samemu mo\u017Cesz zje\u015B\u0107. Poka\u017C \u015Brodkowy palec ustawie."
+  m_Text: "<b>Ukryj</b> jedzenie omy\u0142kowo przypisane Tobie, <b>znajd\u017A</b>
+    co\u015B, co samemu mo\u017Cesz zje\u015B\u0107. Poka\u017C \u015Brodkowy palec
+    ustawie."
 --- !u!114 &114259983612179786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1753,8 +1754,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Za zebranie nieodpowiego jedzenia i nieukrycie przypisanego do siebie dostajesz
-    ujemne punkty.
+  m_Text: Za <b>zebranie nieodpowiego</b> jedzenia i <b>nieukrycie</b> przypisanego
+    do siebie dostajesz ujemne punkty.
 --- !u!114 &114274231137394600
 MonoBehaviour:
   m_ObjectHideFlags: 1
